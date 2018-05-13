@@ -3,7 +3,7 @@
 #include <iostream>
 
 #ifndef DEFAULT_LEARNING_RATE
-#define DEFAULT_LEARNING_RATE 0.033
+#define DEFAULT_LEARNING_RATE 0.33
 #endif
 
 class Layer {
@@ -31,4 +31,8 @@ public:
   void backPropagationOutput(float *expectedValue);
   void backPropagationHidden(float *gammaForward, float **weightsForward);
   void updateWeights(void);
+
+  float *getOutput(void);
+  float *getGamma(void);
+  float **getWeights(void);
 };

@@ -96,3 +96,9 @@ void Layer::updateWeights(void) {
     }
   }
 }
+
+float *Layer::getOutput(void) { return outputs; }
+
+float *Layer::getGamma(void) { return gamma; }
+
+float **Layer::getWeights(void) { return weights; }
